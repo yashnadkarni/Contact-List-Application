@@ -1,6 +1,5 @@
 #---------------My Individual DB Design Project-------------------
 #--------------Creator: Yash Nadkarni-----------------------------
-#---------------Net-ID: ydn200000---------------------------------
 from datetime import date
 from os import stat
 from re import L
@@ -520,17 +519,7 @@ delete_contact_btn.grid(row=19,column=1,rowspan=2)
 
 
 root.mainloop()
-#connection.commit()
 connection.close()
 
 
-'''
-SEARCH QUERY 
-
-select c.contact_id,c.first_name,c.middle_name,c.last_name,a.address_type,a.address,a.city,a.state,a.zip,p.Phone_type,p.Area_code,p.Number,d.Date_type,d.Date
- from contact c 
- join address a on c.contact_id=a.contact_id
- join Phone p on c.contact_id=p.contact_id
- join Date d on c.contact_id=d.contact_id
- where CONCAT(c.first_name,c.middle_name,c.last_name,a.address_type,a.address,a.city,a.state,a.zip,p.Phone_type,p.Area_code,p.Number,d.Date_type,d.Date) LIKE "%Brand%";'''
 
